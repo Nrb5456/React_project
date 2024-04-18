@@ -1,0 +1,79 @@
+.navbar {
+    background-color: rgb(0, 102, 170);
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
+}
+
+.navbar li {
+    display: inline;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.checkbox:checked + label > .hamburger > .bar1{
+    transform: translateX(40px);
+    background-color: transparent;
+}
+
+.checkbox:checked + label > .hamburger > .bar2{
+    transform: rotate(45deg);
+}
+
+.checkbox:checked + label > .hamburger > .bar3{
+    transform: rotate(-45deg);
+}
+
+.checkbox:checked + label > .hamburger > .bar4{
+    transform: translateX(-40px);
+    background-color: transparent;
+}
+
+.visuallyHidden {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px; width: 1px; 
+    margin: -1px; padding: 0; border: 0; 
+}
+
+.hamburger {
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;
+}
+
+.hamburger .bar {
+    padding: 0;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    display: block;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    position: absolute; 
+}
+
+.bar1 {
+    top: 0;
+}
+
+.bar2,
+.bar3 {
+    top: 13.5px;
+}
+
+.bar3 {
+    right: 0;
+}
+
+.bar4 {
+    bottom: 0;
+}
