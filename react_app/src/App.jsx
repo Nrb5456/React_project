@@ -1,17 +1,16 @@
-import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import TodoList from './Pages/TodoList'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './Pages/Home'
 
 function App() {
   return (
-      <div>
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<TodoList />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
+      <>
+        <Router>
+          <Switch>
+            <Route path='/' />
+          </Switch>
+        </Router>
+      </>
   )
 }
 

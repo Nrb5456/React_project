@@ -1,20 +1,31 @@
+import React, {useState} from 'react'
 import './Navbar.css'
+import * as FaIcons from 'react-icons/fa6'
+import * as IoIcons5 from "react-icons/io5"
+import { Link } from 'react-router-dom'
 
 function Navbar() {
-  return (
-        <header className='navbar'>
-            <nav>
-                <input type="checkbox" id="checkbox" className="checkbox visuallyHidden" />
-                <label htmlFor="checkbox">
-                    <div className="hamburger">
-                        <span className="bar bar1"></span>
-                        <span className="bar bar2"></span>
-                        <span className="bar bar3"></span>
-                        <span className="bar bar4"></span>
-                    </div>
-                </label>
+    const [sidenav, setSidenav] = useState(false)
+
+    const showSidenav = () => setSidenav(!sidenav)
+
+    return (
+        <>
+            <div className="navbar">
+                <Link to="#" className="menu-bars">
+                    <FaIcons.FaBars onClick={showSidenav}/>
+                </Link>
+            </div>
+            <nav className={sidenav ? 'nav-menu active' : 'nav-menu'}>
+                <ul className="nav-menu-items">
+                    <li className="navbar-toggle">
+                        <Link to="#" className="menu-bars">
+                            <IoIcons5.IoClose />
+                        </Link>    
+                    </li>  
+                </ul>
             </nav>
-        </header>
+        </>
     );
 }
 
